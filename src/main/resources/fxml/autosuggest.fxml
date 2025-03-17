@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="402.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nonstick.autosuggestjavafx.TrieController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="402.0" prefWidth="430.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Label layoutX="4.0" layoutY="31.0" text="Trie Size:" />
+            <Label fx:id="corpusSizeLabel" layoutX="63.0" layoutY="31.0" text="0" />
+            <Label fx:id="resultLabel" alignment="CENTER" layoutX="314.0" layoutY="66.0" prefHeight="26.0" prefWidth="317.0" text="&lt;Button use results&gt;" textAlignment="CENTER" textFill="#807a7a" />
+            <Button fx:id="addButton" layoutX="156.0" layoutY="50.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addButtonClick" prefHeight="26.0" prefWidth="26.0" text="+" />
+            <Button fx:id="removeButton" layoutX="184.0" layoutY="50.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#removeButtonClick" prefHeight="26.0" prefWidth="26.0" text="-" />
+            <Button fx:id="findButton" layoutX="212.0" layoutY="50.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#findButtonClick" prefHeight="26.0" prefWidth="26.0" text="?" />
+            <Button fx:id="queryCorpusButton" layoutX="240.0" layoutY="50.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#queryButtonClick" prefHeight="26.0" prefWidth="66.0" text="[?],[?]..." />
+            <TextField fx:id="generalTextField" alignment="CENTER" layoutX="4.0" layoutY="50.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="150.0" promptText="enter a word">
+               <font>
+                  <Font name="Noto Sans Kannada Regular" size="13.0" />
+               </font>
+            </TextField>
+            <Button layoutX="4.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#addTBLonClick" prefHeight="26.0" prefWidth="150.0" text="add: The BIg Lebowski" />
+            <ComboBox fx:id="resultComboBox" layoutX="156.0" layoutY="77.0" prefWidth="150.0" promptText="Suggestion result" />
+            <Label layoutX="3.0" layoutY="3.0" text="Autocomplete experiments">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="444.0" layoutY="385.0" text="© 2025 NonStick Software/Scott Dodson">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="53.0" layoutX="308.0" layoutY="50.0" stroke="#bcbcbc" strokeLineJoin="BEVEL" strokeType="INSIDE" width="328.0" />
+            <Text layoutX="4.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graph Size:" />
+            <Label layoutX="79.0" layoutY="108.0" text="0" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="AutosuggestJavaFX">
+    <output-path>$PROJECT_DIR$/out/artifacts/AutosuggestJavaFX</output-path>
+    <root id="root">
+      <element id="archive" name="AutosuggestJavaFX.jar">
+        <element id="module-output" name="AutosuggestJavaFX" />
+      </element>
+    </root>
+  </artifact>
+</component>
